@@ -6,11 +6,29 @@
         {
             Console.WriteLine("=====Среднее арифметическое, сумма и произведение двух чисел=====");
 
-            Console.Write("Введите первое число: ");
-            int num1 = int.Parse(Console.ReadLine());
+            int num1, num2;
 
-            Console.Write("Введите второе число: ");
-            int num2 = int.Parse(Console.ReadLine());
+            try
+            {
+                Console.Write("Введите первое число: ");
+                num1 = int.Parse(Console.ReadLine());
+            }
+            catch 
+            {
+                Console.Write("Введено не число\n");
+                num1 = 0;
+            }
+
+            try
+            {
+                Console.Write("Введите второе число: ");
+                num2 = int.Parse(Console.ReadLine());
+            }
+            catch
+            {
+                Console.Write("Введено не число\n");
+                num2 = 0;
+            }
 
             Console.WriteLine("Что нужно вывести: \n1 - сумму чисел; \n2 - произведение чисел; \n3 - среднее арифметическое чисел;");
             Console.WriteLine("Введите 1, 2 или 3: ");
