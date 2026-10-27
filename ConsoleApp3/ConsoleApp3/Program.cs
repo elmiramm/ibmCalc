@@ -16,21 +16,24 @@
             Console.WriteLine("Введите 1, 2 или 3: ");
             int inputNum = int.Parse(Console.ReadLine());
 
-            if (inputNum == 1)
+            switch (inputNum)
             {
-                int sum = num1 + num2;
-                Console.WriteLine($"Сумма чисел {num1} и {num2}: {sum}");
+                case 1: 
+                    Console.WriteLine($"Сумма чисел {num1} и {num2}: {num1 + num2}");
+                    break; 
+                case 2:
+                    Console.WriteLine($"Произведение чисел {num1} и {num2}: {num1 * num2}");
+                    break;
+                case 3:
+                    double average = (double)(num1 + num2) / 2;
+                    Console.WriteLine($"Среднее арифметическое чисел {num1} и {num2}: {average}");
+                    break;
+                default:
+                    Console.WriteLine("Ошибка! Вы ввели неверное число.");
+                    break;
+
             }
-            else if (inputNum == 2)
-            {
-                int mult = num1 * num2;
-                Console.WriteLine($"Произведение чисел {num1} и {num2}: {mult}");
-            }
-            else
-            {
-                double average = (double)(num1 + num2) / 2;
-                Console.WriteLine($"Среднее арифметическое чисел {num1} и {num2}: {average}");
-            }
+
         }
     }
 }
