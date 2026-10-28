@@ -14,7 +14,7 @@
                 if (i == 2) { sum += i; continue; }
                 if (i % 2 == 0) continue;
                 bool isPrime = true;
-                for (int j = 2; j < i; j++)
+                for (int j = 2; j * j <= i; j++) // то же, что и j < (int)Math.Sqrt(i)
                 {
                     if (i % j == 0) isPrime = false;
                 }
