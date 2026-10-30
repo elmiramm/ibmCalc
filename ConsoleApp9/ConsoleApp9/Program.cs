@@ -27,7 +27,7 @@
             numbArr[numbArr.Length - 2] = max;
             numbArr[numbArr.Length - 1] = min;
 
-            for (int i = 0; i < numbArr.Length; i++)
+            for (int i = 0; i < numbArr.Length; i++) // Console.WriteLine(string.Join("", numbArr))
             {
                 Console.Write(numbArr[i]);
             }
